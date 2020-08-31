@@ -1,4 +1,4 @@
-# paytm-checksum-api-nodejs
+# paytm-payment_node_functions_firebase
 A PayTM checksum api in nodejs to provide backend for Mobile/Web apps
 
 
@@ -12,6 +12,7 @@ A PayTM checksum api in nodejs to provide backend for Mobile/Web apps
 - Update `appConfig.js` with your merchant-id/key and hosturl
 - install dependencies
 `npm install`
+-for working of payments url change url in function/server/config/appConfig.js 
 - run app
 `npm run start`
 
@@ -29,6 +30,7 @@ http://localhost:3000/api/v1/paytm/callback - This endpoint is called from PayTM
 - Navigate to it using console
 - Install Firebase tools: `npm install -g firebase-tools`
 - Login to Firebase: `firebase login`
+--for working of payments url change url in function/server/config/appConfig.js 
 - Initialize firebase project: `firebase init`  
   - Select your project and Cloud Functions
   - This will create firebase functions project
@@ -39,11 +41,12 @@ http://localhost:3000/api/v1/paytm/callback - This endpoint is called from PayTM
 const app = require('./server/app');
 exports.api = functions.https.onRequest(app);
 ```
+
 - Cloud function is ready. You can now deploy it using `firebase deploy`
 - Check if it is deployed correctly
   - Go to Firebase Cloud Functions
   - Copy Function URL
-  - Navigate to: `https://<PROJECT_LOCATION>-<PROJECT_NAME>.cloudfunctions.net/api/api/v1/paytm/healthcheck`
+  - Navigate to: `https://<PROJECT_LOCATION>-<PROJECT_NAME>.cloudfunctions.net/api/api/v1/paytm/healthcheck
   - You should see text: `working`
+  -for working of payments url change url in function/server/config/appConfig.js 
 
-You can also refer to `firebase-functions-example`.
